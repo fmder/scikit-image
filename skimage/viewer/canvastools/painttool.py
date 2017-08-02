@@ -169,7 +169,7 @@ class PaintTool(CanvasToolBase):
 
     def update_overlay(self, x, y):
         overlay = self.overlay
-        overlay[self.window.at(y, x)] = self.label
+        overlay[self.window.at(int(round(y)), int(round(x)))] = self.label
         # Note that overlay calls `redraw`
         self.overlay = overlay
 
